@@ -1,0 +1,41 @@
+nav {
+    background: #1C204B;
+    background: #1C204B;
+    padding: 25px 0;
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            a {
+                img {
+                    width: 185px;
+                }
+            }
+        }
+        .links-list {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    list-style: none;
+                    a {
+                        color: #7078C9;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 32px;
+                        text-decoration: none;
+                        transition: all .3s;
+                        display: inline-block;
+                        margin-left: 25px;
+                        &.active,
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

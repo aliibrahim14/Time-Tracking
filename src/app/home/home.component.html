@@ -1,0 +1,58 @@
+<section class="home-page">
+    <div class="container">
+        <div class="home-content">
+            <div class="profile-card">
+                <div class="user-info">
+                    <div class="user-img">
+                        <img src="/assets/home/Bitmap.png" alt="" srcset="">
+                    </div>
+                    <h5>Report For</h5>
+                    <h3>Best Sales</h3>
+                </div>
+                <div class="tabs-section">
+                    <ul>
+                        <li>
+                            <a href="">Daily</a>
+                        </li>
+                        <li>
+                            <a href="" class="active">Weekly</a>
+                        </li>
+                        <li>
+                            <a href="">Monthly</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>  
+            <div class="cards">
+                <div class="card-content" *ngFor="let detail of details" [routerLink]="['home/', detail.id]">
+                    <div class="main-content">
+                        <div class="title">
+                            <h4>
+                                {{detail.category}}
+                            </h4>
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="price">
+                            <h2>
+                                {{detail.price}}$
+                            </h2>
+                        </div>
+                        <div class="details">
+                            <p>
+                                {{detail.title}}
+                            </p>
+                            <div class="store">
+                                <h5>InStore</h5>
+                                <p>{{detail.rating.count}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
